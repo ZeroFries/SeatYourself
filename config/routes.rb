@@ -1,4 +1,6 @@
 Seatyourself::Application.routes.draw do
+  resources :restaurants
+
   resources :owners
 
   resources :customers
