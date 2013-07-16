@@ -5,4 +5,10 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 	end
+
+	factory :owner do
+		email "Example2@example.com"
+		password "password"
+		password_confirmation "password"
+	end
 end
