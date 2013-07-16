@@ -6,6 +6,7 @@ class OwnersController < ApplicationController
 	def create
 		@owner = owner.create owner_params
 		if @owner.save
+			session[:user_id] = @owner.id
 		else
 			render :new
 		end
