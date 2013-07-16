@@ -4,6 +4,7 @@ class Owner < ActiveRecord::Base
 
 	# associations
 	has_many :restaurants
+	has_many :reservations, through: :restaurant
 
 	# validations
 	validates :email, presence: true, format: { with: valid_email }, uniqueness: { case_sensitive: false }

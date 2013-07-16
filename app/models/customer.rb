@@ -1,4 +1,8 @@
 class Customer < ActiveRecord::Base
+	# associations
+	has_many :reservations
+	
+	# validations
 	has_secure_password
 	valid_email = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
