@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716183929) do
+ActiveRecord::Schema.define(version: 20130716185958) do
 
   create_table "customers", force: true do |t|
     t.string   "email"
@@ -52,5 +52,15 @@ ActiveRecord::Schema.define(version: 20130716183929) do
   end
 
   add_index "restaurants", ["owner_id"], name: "index_restaurants_on_owner_id"
+
+  create_table "time_slots", force: true do |t|
+    t.datetime "time"
+    t.boolean  "available",     default: true
+    t.integer  "restaurant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "time_slots", ["restaurant_id"], name: "index_time_slots_on_restaurant_id"
 
 end

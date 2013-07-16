@@ -1,4 +1,6 @@
 Seatyourself::Application.routes.draw do
+  resources :time_slots
+
   resources :menu_items
 
   resources :restaurants

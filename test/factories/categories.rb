@@ -25,4 +25,8 @@ FactoryGirl.define do
 		price_in_cents 1000
 		description "thats a tastey meat ball"
 	end
+
+	factory :time_slot do
+		time Time.now
+	end
 end
