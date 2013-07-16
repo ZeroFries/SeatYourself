@@ -10,4 +10,16 @@ class CustomerTest < ActiveSupport::TestCase
 
   	assert !@customer.save
 	end
+
+	test "user needs an email" do
+		@customer.email = ""
+
+  	assert !@customer.save
+	end
+
+	test "user needs a VALID email" do
+		@customer.email = "test"
+
+  	assert !@customer.save
+	end
 end
