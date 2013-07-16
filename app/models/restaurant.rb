@@ -4,6 +4,7 @@ class Restaurant < ActiveRecord::Base
 
   # validations
   validates :price_range, presence: true, inclusion: (1..5)
+  validates :address, :neighbourhood, presence: true
 
   # callbacks
 end

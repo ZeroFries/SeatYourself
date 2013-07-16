@@ -27,4 +27,16 @@ class RestaurantTest < ActiveSupport::TestCase
 
 		assert !@restaurant.save
 	end
+
+	test "has address" do
+		@restaurant.address = ""
+
+		assert !@restaurant.save
+	end
+
+	test "has neighbourhood" do
+		@restaurant.neighbourhood = ""
+
+		assert !@restaurant.save
+	end
 end
