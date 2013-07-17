@@ -7,6 +7,7 @@ class OwnersController < ApplicationController
 		@owner = owner.create owner_params
 		if @owner.save
 			session[:user_id] = @owner.id
+			redirect_to @customer, notice: "Welcome to SeatYourself!"
 		else
 			render :new
 		end

@@ -32,4 +32,10 @@ class ReservationTest < ActiveSupport::TestCase
 
   	assert !@reservation2.save
   end
+
+  test "cannot book past capacity" do #just set capacity to be a standard 100
+    100.times do 
+      FactoryGirl.create(:user)
+    end
+  end
 end

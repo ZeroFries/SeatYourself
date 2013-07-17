@@ -1,6 +1,7 @@
 class Customer < ActiveRecord::Base
 	# associations
 	has_many :reservations
+	has_many :restaurants, through: :reservations
 	
 	# validations
 	has_secure_password

@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<div class='nav-bar-top'>
+	<ul>
+		<li><%= link_to "Restaurants", restaurants_url %></li>
+		<% if current_user %>
+			<li><%= link_to "Log out", session_url %></li>
+		<% else %>
+			<li><%= link_to "Log in", new_session_url %></li>
+		<% end %>
+	</ul>
+</div>
+
 <%= yield %>
 
 </body>

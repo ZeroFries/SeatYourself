@@ -7,6 +7,7 @@ class CustomersController < ApplicationController
 		@customer = Customer.create customer_params
 		if @customer.save
 			session[:user_id] = @customer.id
+			redirect_to @customer, notice: "Welcome to SeatYourself!"
 		else
 			render :new
 		end

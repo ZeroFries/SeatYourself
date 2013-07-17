@@ -38,5 +38,9 @@ class CustomerTest < ActiveSupport::TestCase
 		assert !@customer3.save
 	end
 
+	test "authenticates with valid pw" do
+		assert @customer.authenticate("password")
+	end
+
 	# need tests for loyalty pts and making reservations and such
 end
